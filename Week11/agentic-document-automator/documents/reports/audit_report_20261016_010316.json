@@ -1,0 +1,150 @@
+[
+    {
+        "timestamp": "2026-10-16T01:03:15.848243",
+        "status": "INFO",
+        "task_type": "agent_run",
+        "message": "Document Agent started.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:15.848362",
+        "status": "INFO",
+        "task_type": "generate_word_report",
+        "message": "Starting task 'Generate Monthly Performance Report'",
+        "details": {
+            "name": "Generate Monthly Performance Report",
+            "type": "generate_word_report",
+            "template_path": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\templates/report_template.docx",
+            "output_path": "documents/generated_report.docx",
+            "data": {
+                "REPORT_TITLE": "Monthly Performance Summary",
+                "INTRODUCTION_TEXT": "This automated report provides a summary of key performance indicators.",
+                "MONTH_PERIOD": "August 2026"
+            },
+            "table_data": [
+                [
+                    "Category",
+                    "Value",
+                    "Trend"
+                ],
+                [
+                    "Sales Revenue",
+                    "$120,000",
+                    "Up 10%"
+                ],
+                [
+                    "Customer Acquisition",
+                    "500",
+                    "Stable"
+                ],
+                [
+                    "Project Completion Rate",
+                    "95%",
+                    "Excellent"
+                ]
+            ]
+        }
+    },
+    {
+        "timestamp": "2026-10-16T01:03:15.873469",
+        "status": "SUCCESS",
+        "task_type": "generate_word_report",
+        "message": "Task 'Generate Monthly Performance Report' completed.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:15.873664",
+        "status": "INFO",
+        "task_type": "apply_pdf_watermark",
+        "message": "Starting task 'Apply Confidential Watermark to PDF'",
+        "details": {
+            "name": "Apply Confidential Watermark to PDF",
+            "type": "apply_pdf_watermark",
+            "input_pdf": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/source_document.pdf",
+            "output_pdf": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/watermarked_document.pdf",
+            "watermark_text": "CONFIDENTIAL",
+            "font_size": 70,
+            "color": [
+                1,
+                0,
+                0,
+                0.15
+            ],
+            "angle": 55
+        }
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.015804",
+        "status": "SUCCESS",
+        "task_type": "apply_pdf_watermark",
+        "message": "Task 'Apply Confidential Watermark to PDF' completed.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.015976",
+        "status": "INFO",
+        "task_type": "merge_pdfs",
+        "message": "Starting task 'Merge Project Documentation'",
+        "details": {
+            "name": "Merge Project Documentation",
+            "type": "merge_pdfs",
+            "input_pdfs": [
+                "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/dummy_doc1.pdf",
+                "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/dummy_doc2.pdf"
+            ],
+            "output_pdf": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/merged_docs.pdf"
+        }
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.023318",
+        "status": "SUCCESS",
+        "task_type": "merge_pdfs",
+        "message": "Task 'Merge Project Documentation' completed.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.023518",
+        "status": "INFO",
+        "task_type": "extract_word_text",
+        "message": "Starting task 'Extract Text from Generated Word Report'",
+        "details": {
+            "name": "Extract Text from Generated Word Report",
+            "type": "extract_word_text",
+            "input_docx": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/generated_report.docx",
+            "output_text_file": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/extracted_word_text.txt"
+        }
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.051316",
+        "status": "SUCCESS",
+        "task_type": "extract_word_text",
+        "message": "Task 'Extract Text from Generated Word Report' completed.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.051492",
+        "status": "INFO",
+        "task_type": "extract_pdf_text",
+        "message": "Starting task 'Extract Text from Source PDF'",
+        "details": {
+            "name": "Extract Text from Source PDF",
+            "type": "extract_pdf_text",
+            "input_pdf": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/source_document.pdf",
+            "output_text_file": "C:\\Users\\Admin\\OneDrive\\เดสก์ท็อป\\Script\\683380591-6_sec1_script_programming\\Week11\\agentic-document-automator\\documents/extracted_pdf_text.txt"
+        }
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.067205",
+        "status": "SUCCESS",
+        "task_type": "extract_pdf_text",
+        "message": "Task 'Extract Text from Source PDF' completed.",
+        "details": {}
+    },
+    {
+        "timestamp": "2026-10-16T01:03:16.067406",
+        "status": "INFO",
+        "task_type": "agent_run_summary",
+        "message": "Finished in 0.22s.",
+        "details": {}
+    }
+]
